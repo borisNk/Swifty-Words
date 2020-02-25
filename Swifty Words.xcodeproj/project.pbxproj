@@ -13,6 +13,8 @@
 		C85C6FE82405A076000F2718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FE62405A076000F2718 /* Main.storyboard */; };
 		C85C6FEA2405A077000F2718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FE92405A077000F2718 /* Assets.xcassets */; };
 		C85C6FED2405A077000F2718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FEB2405A077000F2718 /* LaunchScreen.storyboard */; };
+		C85C6FF62405A71C000F2718 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FF42405A71B000F2718 /* LICENSE.md */; };
+		C85C6FF72405A71C000F2718 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FF52405A71C000F2718 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C85C6FE92405A077000F2718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C85C6FEC2405A077000F2718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C85C6FEE2405A077000F2718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85C6FF42405A71B000F2718 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		C85C6FF52405A71C000F2718 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 		C85C6FD42405A076000F2718 = {
 			isa = PBXGroup;
 			children = (
+				C85C6FF42405A71B000F2718 /* LICENSE.md */,
+				C85C6FF52405A71C000F2718 /* README.md */,
 				C85C6FDF2405A076000F2718 /* Swifty Words */,
 				C85C6FDE2405A076000F2718 /* Products */,
 			);
@@ -125,7 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85C6FF62405A71C000F2718 /* LICENSE.md in Resources */,
 				C85C6FED2405A077000F2718 /* LaunchScreen.storyboard in Resources */,
+				C85C6FF72405A71C000F2718 /* README.md in Resources */,
 				C85C6FEA2405A077000F2718 /* Assets.xcassets in Resources */,
 				C85C6FE82405A076000F2718 /* Main.storyboard in Resources */,
 			);
@@ -223,6 +231,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -276,6 +285,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -294,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.borisnk.Swifty-Words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -312,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.borisnk.Swifty-Words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
