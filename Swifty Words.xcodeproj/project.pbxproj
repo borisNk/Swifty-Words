@@ -15,6 +15,8 @@
 		C85C6FED2405A077000F2718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FEB2405A077000F2718 /* LaunchScreen.storyboard */; };
 		C85C6FF62405A71C000F2718 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FF42405A71B000F2718 /* LICENSE.md */; };
 		C85C6FF72405A71C000F2718 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C85C6FF52405A71C000F2718 /* README.md */; };
+		C87A473D2408718800D23CD7 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = C87A473B2408718800D23CD7 /* level1.txt */; };
+		C87A473E2408718800D23CD7 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C87A473C2408718800D23CD7 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C85C6FEE2405A077000F2718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85C6FF42405A71B000F2718 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		C85C6FF52405A71C000F2718 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C87A473B2408718800D23CD7 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		C87A473C2408718800D23CD7 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		C85C6FDF2405A076000F2718 /* Swifty Words */ = {
 			isa = PBXGroup;
 			children = (
+				C87A473B2408718800D23CD7 /* level1.txt */,
+				C87A473C2408718800D23CD7 /* level2.txt */,
 				C85C6FE02405A076000F2718 /* AppDelegate.swift */,
 				C85C6FE22405A076000F2718 /* SceneDelegate.swift */,
 				C85C6FE42405A076000F2718 /* ViewController.swift */,
@@ -132,8 +138,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85C6FF62405A71C000F2718 /* LICENSE.md in Resources */,
+				C87A473E2408718800D23CD7 /* level2.txt in Resources */,
 				C85C6FED2405A077000F2718 /* LaunchScreen.storyboard in Resources */,
 				C85C6FF72405A71C000F2718 /* README.md in Resources */,
+				C87A473D2408718800D23CD7 /* level1.txt in Resources */,
 				C85C6FEA2405A077000F2718 /* Assets.xcassets in Resources */,
 				C85C6FE82405A076000F2718 /* Main.storyboard in Resources */,
 			);
