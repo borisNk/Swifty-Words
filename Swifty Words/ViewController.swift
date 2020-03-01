@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         }
     }
     var level = 1
+    var correctAnswers = 0
+
     
     override func loadView() {
         view = UIView()
@@ -51,7 +53,7 @@ class ViewController: UIViewController {
         answersLabel.numberOfLines = 0
         answersLabel.textAlignment = .right
         view.addSubview(answersLabel)
-
+        
         currentAnswer = UITextField()
         currentAnswer.translatesAutoresizingMaskIntoConstraints = false
         currentAnswer.placeholder = "Tap letters to guess"
@@ -74,6 +76,7 @@ class ViewController: UIViewController {
         
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsView.layer.borderWidth = 1
         view.addSubview(buttonsView)
         
         NSLayoutConstraint.activate([
@@ -81,22 +84,22 @@ class ViewController: UIViewController {
             scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
             // pin the top of the clues label to the bottom of the score label
             cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
-
+            
             // pin the leading edge of the clues label to the leading edge of our layout margins, adding 100 for some space
             cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
-
+            
             // make the clues label 60% of the width of our layout margins, minus 100
             cluesLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6, constant: -100),
-
+            
             // also pin the top of the answers label to the bottom of the score label
             answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
-
+            
             // make the answers label stick to the trailing edge of our layout margins, minus 100
             answersLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -100),
-
+            
             // make the answers label take up 40% of the available space, minus 100
             answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.4, constant: -100),
-
+            
             // make the answers label match the height of the clues label
             answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor),
             
@@ -136,7 +139,7 @@ class ViewController: UIViewController {
                 
                 let frame = CGRect(x: col * width, y: row * height, width: width, height: height)
                 letterButton.frame = frame
-
+                
                 buttonsView.addSubview(letterButton)
                 letterButtons.append(letterButton)
             }
@@ -167,17 +170,27 @@ class ViewController: UIViewController {
             
             currentAnswer.text = ""
             score += 1
+            correctAnswers += 1
             
-            if score % 7 == 0 {
+            if correctAnswers % 7 == 0 {
                 let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(ac, animated: true)
             }
+        } else {
+            if score > 0 {
+                score -= 1
+            }
+            
+            let ac = UIAlertController(title: "Wrong!", message: "You've entered a wrong answer.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Try again", style: .default, handler: clearAnswer))
+            present(ac, animated: true)
         }
     }
     
     func levelUp(action: UIAlertAction) {
         level += 1
+        correctAnswers = 0
         solutions.removeAll(keepingCapacity: true)
         loadLevel()
         for button in letterButtons {
@@ -186,6 +199,10 @@ class ViewController: UIViewController {
     }
     
     @objc func clearTapped(_ sender: UIButton) {
+        clearAnswer(action: nil)
+    }
+    
+    func clearAnswer(action: UIAlertAction?) {
         currentAnswer.text = ""
         
         for btn in activatedButtons {
@@ -234,7 +251,7 @@ class ViewController: UIViewController {
             }
         }
     }
-
-
+    
+    
 }
 
